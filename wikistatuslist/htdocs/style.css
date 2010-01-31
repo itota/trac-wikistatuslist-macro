@@ -1,0 +1,23 @@
+table.wikistatuslist thead th {
+    border-bottom: 1px solid #ccc;
+}
+
+table.wikistatuslist tbody td {
+    padding: 0 .3em;
+}
+
+table.wikistatuslist tbody td.name,
+table.wikistatuslist tbody td.time,
+table.wikistatuslist tbody td.comment {
+    text-align: left;
+}
+
+table.wikistatuslist tbody td.author {
+    text-align: center;
+}
+
+table.wikistatuslist tbody td.name,
+table.wikistatuslist tbody td.time,
+table.wikistatuslist tbody td.version {
+    white-space: nowrap;
+}
