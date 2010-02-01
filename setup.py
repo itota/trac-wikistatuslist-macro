@@ -35,7 +35,7 @@ setup(
     keywords = 'trac plugin wiki list macro',
     author = 'Takashi Ito',
     author_email = 'TakashiC.Ito@gmail.com',
-    url = '',
+    url = 'http://github.com/itota/trac-wikistatuslist-macro',
     description = 'Wiki page status listing macro for Trac',
     license = 'BSD',
 

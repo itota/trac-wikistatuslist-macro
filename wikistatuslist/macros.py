@@ -44,8 +44,10 @@ class WikiStatusListMacro(WikiMacroBase):
         cols = []
         # page name
         if self.pagename == 'short':
-            name = name.rsplit('/', 1)[-1]
-        cols.append(tag.td(tag.a(name, href=self.href.wiki(name)), class_='name'))
+            _name = name.rsplit('/', 1)[-1]
+        else:
+            _name = name
+        cols.append(tag.td(tag.a(_name, href=self.href.wiki(name)), class_='name'))
         # last modified
         href_ago = self.href('timeline', precision='seconds', from_=format_datetime(time, 'iso8601'))
         a_ago = [' (', tag.a(pretty_timedelta(time), href=href_ago), ' ago)']
