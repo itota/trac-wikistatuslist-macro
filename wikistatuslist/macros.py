@@ -30,6 +30,7 @@ from trac.web.api import IRequestFilter
 from trac.web.chrome import add_stylesheet, ITemplateProvider
 from trac.wiki.macros import WikiMacroBase
 from trac.util import format_datetime, pretty_timedelta
+from trac.util.datefmt import from_utimestamp
 from genshi.builder import tag
 
 
@@ -41,6 +42,7 @@ class WikiStatusListMacro(WikiMacroBase):
     thead = tag.thead(tag.tr([tag.th(x) for x in headers]))
 
     def _build_row(self, name, time, author, version, comment):
+        time = from_utimestamp(time)
         cols = []
         # page name
         if self.pagename == 'short':
